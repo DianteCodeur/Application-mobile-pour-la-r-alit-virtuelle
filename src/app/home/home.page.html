@@ -1,0 +1,32 @@
+<ion-content class="app-container">
+
+	<ion-content class="header">
+		<div class="logo-container">
+			<ion-img id="logo" [src]="'assets/icon/logo.png'"></ion-img>
+		</div>
+		<!-- <span *ngIf="displayShareButton" class="share-container" (click)="takeScreenshot()"> -->
+		<span *ngIf="displayShareButton" class="share-container" (click)="takeScreenshot()">
+			<ion-icon name="share"></ion-icon>
+			
+		</span>
+
+		<span *ngIf="displayAlertMissing" id="alertMissing" class="missing-container">
+		  <span [innerHTML]="userMessage"></span>
+		</span>
+	</ion-content>
+
+  <ion-content *ngIf="displayCamera" [fullscreen]="true">
+    <iframe name="arcomponent" src="../assets/augmented-reality/scene.html" style="position:absolute; width: 100%; height: 100%; border: none"></iframe>
+  </ion-content>
+
+	<div id="screenshotContainer" [class.hidden]="!displayCamera">
+		<ion-img [src]="screenshot"></ion-img>
+	</div>
+
+	<ion-content class="base">
+		<div>
+			
+		</div>
+	</ion-content>
+
+</ion-content>

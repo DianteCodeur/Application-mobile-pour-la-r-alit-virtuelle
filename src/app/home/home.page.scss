@@ -1,0 +1,82 @@
+ion-content ion-toolbar {
+  --background: translucent;
+}
+
+.app-container {
+  position: relative;
+  .header {
+    z-index: 3;
+    position: absolute;
+    --background: transparent;
+    text-align: center;
+    .logo-container {
+      display: flex;
+      flex-direction: row;
+      margin: 6px 2em 0 1em;
+      #logo {
+        width: 8%;
+        margin: 0;
+      }
+      #logoCripsy {
+        width: 80%;
+        margin: 20px auto 20px auto;
+      }
+    }
+    .share-container {
+      display: inline-block;
+      background-color: #044137;
+      color: white;
+      padding: 10px 16px 10px 16px;
+      border-radius: 20px;
+      ion-icon {
+        color: #F6DC1D;
+        font-size: 44px;
+      }
+      span {
+        display: inline-block;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: initial;
+        margin-left: 10px;
+        font-family: Chalkduster, fantasy;
+      }
+    }
+
+    .missing-container {
+      background-color: rgba(246, 220, 29, 0.6);
+      color: #044137;
+      margin-top: 40%;
+      padding: 10px 16px 10px 16px;
+      border-radius: 20px;
+    }      
+    span {
+      display: inline-block;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: initial;
+      margin-left: 10px;
+      font-family: Chalkduster, fantasy;
+    }
+
+  }
+
+
+  .base {
+    z-index: 2;
+    position: absolute;
+    --background: transparent;
+    bottom: 1px;
+    ion-img {
+      margin-top: 100%;
+    }
+    //bottom: 1px;
+  }
+}
+
+#screenshotContainer {
+  z-index: 1;
+}
+
+#alertMissing {
+  z-index: 1;
+}
